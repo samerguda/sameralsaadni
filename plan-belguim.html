@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة المهندس سامر - بلجيكا 2026</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: var(--primary);
+        }
+
+        /* ستيل عداد الوقت والتاريخ */
+        .header-info {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #clock {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 { text-align: center; color: var(--primary); }
+
+        .milestone-card {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-right: 5px solid var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .milestone-card:hover { transform: scale(1.01); }
+
+        .year-label {
+            font-weight: bold;
+            background: var(--accent);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        ul { margin-top: 10px; }
+        li { margin-bottom: 8px; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-info">
+        <div>
+            <div id="date"></div>
+            <div style="font-size: 0.8rem; opacity: 0.8;">كورتريك، بلجيكا</div>
+        </div>
+        <div id="clock">00:00:00</div>
+    </div>
+
+    <h1>خطة الطريق المهنية (2026 - 2030)</h1>
+
+    <div class="milestone-card">
+        <span class="year-label">2026: سنة الانطلاق</span>
+        <h3>استلام الكارت الأورانج واللغة</h3>
+        <ul>
+            <li><strong>7 يناير:</strong> استلام الكارت الأورانج وبدء حق العمل.</li>
+            <li><strong>اللغة:</strong> التسجيل في CVO Scala (مستوى A1/A2).</li>
+            <li><strong>المعادلة:</strong> تقديم ملف NARIC عبر مكتب الاندماج.</li>
+        </ul>
+    </div>
+
+    <div class="milestone-card">
+        <span class="year-label">2027: سنة العودة للمكانة</span>
+        <h3>التثبيت المهني (Senior Engineer)</h3>
+        <ul>
+            <li>الحصول على عقد عمل دائم (Vast Contract).</li>
+            <li>إنهاء ماجستير الإدارة البرتغالي.</li>
+            <li>استخدام لقب مهندس (Ing.) رسمياً في بلجيكا.</li>
+        </ul>
+    </div>
+
+    <div class="milestone-card">
+        <span class="year-label">2028: الاستقرار المادي</span>
+        <h3>اللغة المتقدمة والاستثمار</h3>
+        <ul>
+            <li>الوصول لمستوى B2 في اللغة الهولندية.</li>
+            <li>شراء منزل خاص (قرض عقاري بضمان الوظيفة).</li>
+        </ul>
+    </div>
+
+    <div class="milestone-card">
+        <span class="year-label">2029: القيادة</span>
+        <h3>إدارة المشاريع الكبرى</h3>
+        <ul>
+            <li>الترقي لمنصب Project Manager أو Head of MEP.</li>
+            <li>شهادات التخصص في كفاءة الطاقة الأوروبية.</li>
+        </ul>
+    </div>
+
+    <div class="milestone-card">
+        <span class="year-label">2030: الجنسية والحرية</span>
+        <h3>الجنسية البلجيكية والعمل الخاص</h3>
+        <ul>
+            <li>التقديم على الجنسية البلجيكية (بعد 5 سنوات).</li>
+            <li>تأسيس عمل استشاري خاص (Freelance).</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // تحديث الوقت
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+
+        // تحديث التاريخ
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('date').textContent = now.toLocaleDateString('ar-EG', options);
+    }
+
+    // تحديث كل ثانية
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الخمس سنوات - م. سامر</title>
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --bg: #eef2f3;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* رأس الصفحة والتوقيت */
+        .dashboard-header {
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        #clock {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #date { font-size: 1.2rem; opacity: 0.9; }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        /* ستايل السنوات التفصيلي */
+        .year-block {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .year-block::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .year-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .year-title { font-size: 1.8rem; color: var(--primary); margin: 0; }
+        .year-status { background: #d4edda; color: #155724; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+        .grid-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
+
+        .detail-box h4 {
+            margin-top: 0;
+            color: var(--secondary);
+            border-right: 3px solid var(--secondary);
+            padding-right: 10px;
+        }
+
+        ul { padding-right: 20px; list-style-type: square; }
+        li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .highlight { color: var(--secondary); font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="dashboard-header">
+        <div id="date">-- جارٍ التحميل --</div>
+        <div id="clock">00:00:00</div>
+        <h3>مستقبل الهندسة في بلجيكا | المهندس سامر</h3>
+    </div>
+
+    <div class="year-block">
+        <div class="year-header">
+            <h2 class="year-title">السنة الأولى: 2026 (سنة التأسيس)</h2>
+            <span class="year-status">المرحلة الحالية</span>
+        </div>
+        <div class="grid-details">
+            <div class="detail-box">
+                <h4>⚖️ المسار القانوني</h4>
+                <ul>
+                    <li><span class="highlight">7 يناير:</span> استلام الكارت الأورانج وبداية التسجيل الوطني.</li>
+                    <li>تقديم ملف الأدلة الكامل لمكتب شؤون الأجانب (صور، رسائل، عقد سكن).</li>
+                    <li>استلام الكارت A (الإقامة الأولى) نهاية السنة.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>🏗️ المسار المهني</h4>
+                <ul>
+                    <li>تقديم طلب "معادلة شهادة هندسة بنها" عبر NARIC (مجاناً).</li>
+                    <li>تعديل الـ CV ليتناسب مع سوق العمل في فلاندرز (Kortrijk).</li>
+                    <li>البدء في وظيفة تقنية أو هندسية أولية لفهم الأكواد البلجيكية.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>🗣️ اللغة والاندماج</h4>
+                <ul>
+                    <li>إنهاء مستويات A1 و A2 في مدرسة CVO Scala.</li>
+                    <li>حضور كورس الاندماج الاجتماعي (Inburgering) باللغة العربية.</li>
+                    <li>تعلم المصطلحات التقنية (HVAC) باللغة الهولندية.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="year-block" style="border-right-color: var(--secondary);">
+        <div class="year-header">
+            <h2 class="year-title">السنة الثانية: 2027 (سنة التثبيت)</h2>
+        </div>
+        <div class="grid-details">
+            <div class="detail-box">
+                <h4>⚙️ المسار التقني</h4>
+                <ul>
+                    <li>الحصول على قرار المعادلة الرسمي (مهندس مكافئ للمستوى البلجيكي).</li>
+                    <li>إنهاء ماجستير الإدارة البرتغالي وربطه بالخبرة الهندسية.</li>
+                    <li>التسجيل في بنك المعلومات للوظائف الهندسية العليا.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>💼 الوظيفة والدخل</h4>
+                <ul>
+                    <li>توقيع عقد عمل <span class="highlight">Vast Contract</span> كمهندس تصميم أو تنفيذ.</li>
+                    <li>الحصول على سيارة شركة (Company Car) وهو عرف سائد للمهندسين ببلجيكا.</li>
+                    <li>بدء التخطيط للتمويل العقاري.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>🗣️ اللغة</h4>
+                <ul>
+                    <li>اجتياز مستوى B1 (القدرة على الحديث بطلاقة في مواقع العمل).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="year-block">
+        <div class="year-header">
+            <h2 class="year-title">السنة الثالثة: 2028 (سنة الاستقرار)</h2>
+        </div>
+        <div class="grid-details">
+            <div class="detail-box">
+                <h4>🏠 الحياة والاستثمار</h4>
+                <ul>
+                    <li>استخدام "العقد الدائم" لشراء أول منزل في منطقة كورتريك/وارجم.</li>
+                    <li>الاستقرار العائلي الكامل بعد سنتين من التعايش الرسمي.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>🔝 التطور المهني</h4>
+                <ul>
+                    <li>التخصص في أنظمة الحماية من الحريق المتطورة (Sprinkler Systems) حسب المواصفات الأوروبية.</li>
+                    <li>إدارة فريق عمل صغير من الفنيين والمهندسين المبتدئين.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="year-block">
+        <div class="year-header">
+            <h2 class="year-title">السنة 4 & 5: (2029-2030) القمة</h2>
+        </div>
+        <div class="grid-details">
+            <div class="detail-box">
+                <h4>🇧🇪 الجنسية</h4>
+                <ul>
+                    <li>تقديم ملف الجنسية البلجيكية (شرط العمل 5 سنوات + لغة + اندماج).</li>
+                    <li>الحصول على جواز السفر البلجيكي.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h4>🚀 الاستقلال المهني</h4>
+                <ul>
+                    <li>التحول إلى نظام <span class="highlight">Freelance Engineer</span> (يصل دخل المهندس الخبير اليومي إلى 500-700 يورو).</li>
+                    <li>تأسيس مكتب استشارات هندسية متخصص في MEP.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateDashboard() {
+        const now = new Date();
+        
+        // الوقت
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const s = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+
+        // التاريخ
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('date').textContent = now.toLocaleDateString('ar-EG', options);
+    }
+
+    setInterval(updateDashboard, 1000);
+    updateDashboard();
+</script>
+
+</body>
+</html>
